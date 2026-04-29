@@ -1,42 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moj portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio - Ime Prezime</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #dba902;
+            color: whitesmoke;
+        }
+
+        /* KONTEJNER */
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        /* KARTICE */
+        .card {
+            background: black;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* PROFIL */
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        /* VEŠTINE */
+        .skills span {
+            display: inline-block;
+            background: #dba902;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        /* PROJEKTI */
+        .project {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .project img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Ime i prezime</h1>
-    <p>Učenik IT smera</p>
-</header>
+    <div class="container">
 
-<section>
-    <h2>O meni</h2>
-    <p>Ovde napiši nešto o sebi...</p>
-</section>
+        <!-- PROFIL -->
+        <div class="card profile">
+            <img src="images/profilna.jpg" alt="profil">
+            <h2>Ime Prezime</h2>
+            <p>Učenik IT smera</p>
+        </div>
 
-<section>
-    <h2>Moji projekti</h2>
+        <!-- O MENI -->
+        <div class="card">
+            <h3>O meni</h3>
+            <p>Zainteresovan sam za programiranje, dizajn i razvoj web aplikacija. Volim da učim nove tehnologije i
+                radim na zanimljivim projektima.</p>
+        </div>
 
-    <div class="projekat">
-        <h3>Mini Instagram</h3>
-        <p>Kratak opis projekta</p>
+        <!-- VEŠTINE -->
+        <div class="card">
+            <h3>Veštine</h3>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>C#</span>
+                <span>SQL</span>
+            </div>
+        </div>
+
+        <!-- PROJEKTI -->
+        <div class="card">
+            <h3>Projekti</h3>
+
+            <div class="project">
+                <img src="images/insta.png" alt="">
+                <div>
+                    <h4>Mini Instagram</h4>
+                    <p>Web aplikacija za prikaz slika u Instagram stilu.</p>
+                    <a href="#">Pogledaj projekat</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/todo.jpg" alt="">
+                <div>
+                    <h4>ToDo lista</h4>
+                    <p>Aplikacija za upravljanje zadacima.</p>
+                    <a href="#">Pogledaj projekat</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- KONTAKT -->
+        <div class="card">
+            <h3>Kontakt</h3>
+            <p>Email: mojemail@gmail.com</p>
+        </div>
+
     </div>
-
-    <div class="projekat">
-        <h3>ToDo lista</h3>
-        <p>Kratak opis projekta</p>
-    </div>
-
-</section>
-
-<section>
-    <h2>Kontakt</h2>
-    <p>Email: nesto@gmail.com</p>
-</section>
 
 </body>
+
 </html>
