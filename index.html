@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Responsive Sajt</title>
+    <style>
+        /* RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #8b0468;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        .navbar h2 {
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hamburger meni (mobile) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        /* KARTICE */
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: #8b0468;
+        }
+
+        .card-content p {
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background-color: #8b0468;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* MEDIA QUERIES */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #8b0468;
+            }
+
+            .nav-links a {
+                padding: 10px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <h2>Moj Sajt na GitHub</h2>        
+    </div>
+
+    <!-- KARTICE -->
+    <div class="container">
+        <div class="card">
+            <a href="https://www.google.com" target="_blank">
+            <img src="images/slika1.png" alt="Portfolio"></a>
+            <div class="card-content">
+                <h3>Portfolio</h3>
+                <p>Otkrijte više o autoru ovih web sajtova.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="https://www.google.com" target="_blank">
+            <img src="images/slika2.png" alt="Fitnes"></a>
+            <div class="card-content">
+                <h3>Fitnes</h3>
+                <p>Primer web sajta za jedan fake fitnes studio.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="https://www.google.com" target="_blank">
+            <img src="images/slika3.png" alt="Priroda"></a>
+            <div class="card-content">
+                <h3>Priroda</h3>
+                <p>Uživajte u lepoti prirode kroz prelepe pejzaže i mirne scene.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Moj Responsive Sajt
+    </footer>
+
+</body>
+
+</html>
